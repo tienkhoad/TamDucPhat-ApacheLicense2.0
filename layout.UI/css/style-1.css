@@ -1,11 +1,11 @@
 @font-face {
     font-family: Montserrat-Regular;
-    src: url('../fonts/Montserrat-Regular.ttf');
+    src: url("../fonts/Montserrat-Regular.ttf");
 }
 
 @font-face {
     font-family: Roboto-MediumItalic;
-    src: url('../fonts/Roboto-MediumItalic.ttf');
+    src: url("../fonts/Roboto-MediumItalic.ttf");
 }
 
 body,
@@ -51,10 +51,18 @@ p {
 }
 
 .title-typical-project,
+/* Home  */
 .best-selling-product,
-.title-our-partner {
+/* Home  */
+.title-our-partner,
+/* Home  */
+.wrapper-content h1,
+/* About Us  */
+.about-us-title-1
+
+/* About Us  */
+    {
     font-size: 40px;
-    text-align: center;
     margin-top: 3%;
     font-family: Roboto-MediumItalic !important;
     font-size: 2em;
@@ -62,6 +70,26 @@ p {
     color: #4d4d4d;
     font-weight: 700;
     margin: 0.67em 0;
+}
+
+.title-typical-project,
+/* Home  */
+.best-selling-product,
+/* Home  */
+.title-our-partner,
+/* Home  */
+.wrapper-content h1 {
+    text-align: center;
+}
+
+.form-field-text {
+    border: 1px solid rgba(127, 127, 127, 0.3);
+    border-radius: 3px;
+    padding: 1.5rem 0.625rem 0.375rem;
+    font-size: 16px;
+    color: #4d4d4d;
+    font-style: normal;
+    font-weight: 400;
 }
 
 /* ----------------------- Top Bar -----------------------*/
@@ -209,7 +237,6 @@ a {
 .box-3:hover {
     transform: scale(1.1);
 }
-
 
 #menu.sticky {
     background-color: #fff;
@@ -362,7 +389,6 @@ div#slogan>span:after {
     to {
         visibility: hidden;
     }
-
 }
 
 #title {
@@ -549,7 +575,6 @@ div#slogan>span:after {
     margin-left: 10px;
 }
 
-
 .promotion-content-left h2,
 .promotion-content-left p,
 .promotion-content-right h2,
@@ -591,8 +616,6 @@ div#slogan>span:after {
     font-weight: 700;
     margin: 0.67em 0;
 }
-
-
 
 .slider {
     position: relative;
@@ -671,7 +694,6 @@ div#slogan>span:after {
 /* ----------------------- typical project  -----------------------*/
 
 /* ----------------------- our partner  -----------------------*/
-
 
 .our-partner {
     margin-top: 5px;
@@ -764,7 +786,6 @@ div#slogan>span:after {
 
 /* ----------------------- footer -----------------------*/
 
-
 /* ----------------------- Login Form -----------------------*/
 .account-page-masthead {
     margin: auto;
@@ -789,14 +810,7 @@ div#slogan>span:after {
     margin: 0.67em 0;
 }
 
-.form-field-input {
-    border: 1px solid rgba(127, 127, 127, .3);
-    border-radius: 3px;
-    padding: 1.5rem 0.625rem 0.375rem;
-    font-size: 16px;
-    color: #4d4d4d;
-    font-style: normal;
-    font-weight: 400;
+.form-field-input-login {
     width: 500px;
 }
 
@@ -814,9 +828,8 @@ div#slogan>span:after {
     background-color: #e32619;
     border: 1px solid #e32619;
     color: white;
-
     padding: 0.625rem 1rem;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-family: Lato, sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -824,7 +837,7 @@ div#slogan>span:after {
     text-decoration: none;
     cursor: pointer;
     border-radius: 3px;
-    transition: background-color .2s ease, width .2s ease, height .2s ease;
+    transition: background-color 0.2s ease, width 0.2s ease, height 0.2s ease;
 }
 
 .form-action-row-helper {
@@ -839,3 +852,54 @@ div#slogan>span:after {
 }
 
 /* ----------------------- Login Form -----------------------*/
+
+/* ----------------------- About Us -----------------------*/
+.wrapper-content {
+    width: 680px;
+    margin: auto !important;
+}
+
+.page-content {
+    width: 680px;
+    margin: auto !important;
+}
+
+.about-us-contact-page-content {
+    width: 680px;
+    margin: auto !important;
+}
+
+.page-content p {
+    text-align: center;
+}
+
+.page-content p {
+    text-align: center;
+}
+
+.about-us-title-1 {
+    text-align: left !important;
+}
+
+.page-content img {
+    width: 70%;
+}
+
+.form-field-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+}
+
+.form-field-half-input {
+    width: 330px;
+}
+
+.form-field-full-width {
+    width: auto;
+}
+
+.form-field-input-contact {
+    width: 680px;
+}
+/* ----------------------- About Us -----------------------*/
