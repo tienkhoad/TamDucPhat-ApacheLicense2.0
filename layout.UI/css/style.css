@@ -1,0 +1,672 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* ----------------------- Top Bar -----------------------*/
+#top-header {
+  background-color: #f93d3d;
+}
+#top-bar {
+  margin: 0;
+  padding: 5px 0;
+  height: 35px;
+}
+#left-topbar ul li,
+#right-topbar ul li {
+  font-family: "Inter";
+  font-size: 13px;
+  list-style-type: none;
+  display: inline;
+  margin-right: 10px;
+}
+a {
+  color: black;
+}
+
+#left-topbar ul {
+  text-align: left !important;
+  padding-left: 1px;
+  display: flex;
+}
+
+#right-topbar ul {
+  text-align: right !important;
+  padding-right: 1px;
+}
+/* ----------------------- Top Bar -----------------------*/
+
+/* ----------------------- Main Content -----------------------*/
+#main-content {
+  width: 100%;
+}
+
+#background {
+  position: relative;
+  opacity: 60%;
+}
+#background img {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.container {
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 7%;
+}
+
+#logo img {
+  width: 35%;
+}
+
+#menu {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+}
+
+.menu-content .cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transform: translateX(-100%);
+  transition: transform 0.3s; 
+}
+
+.menu-content a {
+  /* position: relative;
+  overflow: hidden; */
+}
+
+.menu-content a:hover .cursor {
+  width: 82px; 
+  /* transform: translateX(0); */
+}
+
+/* #menu.sticky {
+  background-color: #fff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+} */
+
+/* -----  fixed menu ----  */
+
+.tamducphat-fixed-header-col img {
+  width: 70%;
+  margin: auto;
+}
+
+.tamducphat-fixed-header-inner-wrapper {
+  margin-left: 7%;
+}
+
+.tamducphat-fixed-header-inner-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.tamducphat-fixed-header-col {
+  display: flex;
+}
+
+.submenu-content {
+  display: none;
+  width: 103px;
+  position: absolute;
+  top: 80%;
+  left: 77%;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.submenu-content li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.sub-menu:hover .submenu-content {
+  display: block;
+}
+
+.col-logo {
+  width: 30%;
+}
+
+.col-contact {
+  margin: auto;
+  width: 22%;
+}
+
+.col-contact a {
+  color: #c4a13d !important;
+  font-size: 35px;
+}
+
+.col-nav {
+  width: 50%;
+}
+
+.col-nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.tamducphat-fixed-header,
+.show-fixed-header {
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  background-color: #dbd5d5; /* Đổi màu nền của thanh navigation bar dính */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.show-fixed-header {
+  top: -110px;
+  left: 0;
+  right: 0;
+  transition: top 0.3s ease;
+}
+
+.show-fixed-header.show {
+  top: 0;
+}
+
+.tamducphat-fixed-header-inner-wrapper {
+  max-width: 84.688vw;
+  margin: 0 auto;
+  padding: 1.313vw 0;
+}
+
+/* -----  fixed menu ----  */
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.menu-content {
+  display: inline-block;
+  margin-left: 3%;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#slogan {
+  font-size: 600%;
+  color: #ed14d7;
+  position: absolute;
+  top: 54%;
+  left: 7%;
+  font-family: "Gelasio";
+  font-weight: bold;
+}
+#title {
+  position: absolute;
+  top: 49%;
+  left: 7%;
+  color: black;
+  font-weight: bold;
+}
+
+.wrapper {
+  /* This part is important for centering */
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  white-space: nowrap;
+  overflow: hidden;
+}
+#btn-buynow {
+  position: absolute;
+  top: 71%;
+  left: 7%;
+}
+
+.wrap-box {
+  position: absolute;
+  width: 89%;
+  height: 97px;
+  top: 80%;
+  left: 7%;
+}
+
+.size-box-detail {
+  position: absolute;
+  width: 250px;
+  height: 97px;
+  background-color: black;
+  opacity: 0.3;
+}
+.box-2 {
+  left: 38%;
+}
+.box-3 {
+  left: 75%;
+}
+
+.quality-img-1 {
+  left: 7.5%;
+}
+
+.quality-img-2 {
+  left: 41.5%;
+}
+
+.quality-img-3 {
+  left: 75%;
+}
+
+.quality {
+  position: absolute;
+  top: 82%;
+  width: 53px;
+  height: 53px;
+}
+
+.title-1 {
+  left: 7%;
+}
+
+.title-2 {
+  left: 44%;
+}
+
+.title-3 {
+  left: 83%;
+}
+
+.title {
+  position: inherit;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  word-wrap: break-word;
+  margin-top: 1%;
+}
+
+.title-all-3 {
+  inline-size: 20%;
+}
+.watch_more {
+  color: red;
+  font-size: 15px;
+  position: inherit;
+  margin-top: 6%;
+}
+
+.watch_more-1 {
+  left: 7%;
+}
+
+.watch_more-2 {
+  left: 44%;
+}
+
+.watch_more-3 {
+  left: 83%;
+}
+
+/* ----------------------- Main Content -----------------------*/
+
+/* ----------------------- danh mục sản phẩm -----------------------*/
+.best-selling-product {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.slider {
+  position: relative;
+  margin-top: 5%;
+}
+
+.type-product {
+  margin-top: 3%;
+}
+
+.see-more-type-product {
+  margin-top: 3%;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  overflow: hidden;
+  flex: 0 0 25%;
+}
+.grid-item {
+  display: grid;
+  grid-template-rows: 300px auto auto;
+  text-align: center;
+}
+.grid-item img {
+  width: 250px;
+  height: 250px;
+}
+
+.grid-item h3,
+.grid-item p {
+  margin: 0;
+}
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slick-slide img {
+  margin: auto;
+}
+
+.prev-arrow,
+.next-arrow {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.next-arrow {
+  margin-right: 10px;
+}
+
+/* ----------------------- danh mục sản phẩm -----------------------*/
+
+/* ----------------------- contact  -----------------------*/
+.contact-wrap {
+  margin-top: 2%;
+}
+.contact-wrap img {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.contact1-form {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+
+.left-contact {
+  position: absolute;
+  top: 10%;
+}
+/* ----------------------- contact  -----------------------*/
+
+/* ----------------------- typical project  -----------------------*/
+.typical-project {
+  margin-top: 5px;
+  background-color: #e6e6e6;
+}
+
+.title-typical-project {
+  font-size: 40px;
+  text-align: center;
+}
+
+.box-video-1,
+.box-video-2,
+.box-video-3 {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+/* ----------------------- typical project  -----------------------*/
+
+/* ----------------------- our partner  -----------------------*/
+.our-partner {
+  margin-top: 5px;
+}
+
+.title-our-partner {
+  font-size: 40px;
+  text-align: center;
+}
+
+.title-slogan-our-partner {
+  text-align: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.circle img {
+  max-width: 80px;
+  max-height: 80px;
+}
+/* ----------------------- our partner  -----------------------*/
+
+/* ----------------------- footer -----------------------*/
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex-basis: 33.33%;
+}
+
+.footer-logo img {
+  width: 50%;
+}
+
+.footer-name-company {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.footer-content {
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.info-company,
+.services-company {
+  margin-left: 15%;
+}
+
+.services-company ol li {
+  margin-top: 10px;
+}
+
+.mastercard img {
+  width: 20%;
+}
+
+/* ----------------------- footer -----------------------*/
+
+/* ----------------------- back to top  -----------------------*/
+#backtotop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f93d3d;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.show-button-back-to-top {
+  display: block;
+}
+/* ----------------------- back to top  -----------------------*/
+
+@media screen and (max-width: 992px) {
+  #right-topbar {
+    display: none;
+  }
+
+  #left-topbar ul li:nth-child(2) {
+    display: none;
+  }
+  #left-topbar ul li:nth-child(3) {
+    display: none;
+  }
+
+  #left-topbar ul li:first-child {
+    display: block;
+    margin: auto;
+  }
+  #artboard {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #left-topbar ul li a,
+  #right-topbar ul li a {
+    font-size: 12px;
+  }
+
+  #slogan {
+    font-size: 480%;
+  }
+
+  .wrap-box {
+    width: 82%;
+  }
+
+  .title-1 {
+    left: 8%;
+  }
+
+  .title-2 {
+    left: 46%;
+  }
+
+  .watch_more-1 {
+    left: 8%;
+  }
+
+  .watch_more-2 {
+    left: 46%;
+  }
+
+  .watch_more {
+    margin-top: 7%;
+  }
+
+  .title-all-3 {
+    inline-size: 23%;
+  }
+
+  .quality-img-2 {
+    left: 38.5%;
+  }
+
+  .quality-img-3 {
+    left: 69%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #menu {
+    width: 64%;
+  }
+
+  #slogan {
+    font-size: 370%;
+  }
+
+  #logo img {
+    width: 25%;
+  }
+
+  #title {
+    font-size: 14px;
+  }
+
+  .wrap-box {
+    margin-top: 10px;
+  }
+
+  .size-box-detail {
+    width: 190px;
+    height: 70px;
+  }
+
+  .quality {
+    width: 40px;
+    height: 40px;
+    top: 84%;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .watch_more {
+    font-size: 12px;
+    margin-top: 8%;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .box-video-1 iframe,
+  .box-video-2 iframe,
+  .box-video-3 iframe {
+    width: 205px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    width: 100%;
+  }
+}

@@ -1,0 +1,841 @@
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: Roboto-MediumItalic;
+    src: url('../fonts/Roboto-MediumItalic.ttf');
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Montserrat-Regular, sans-serif;
+}
+
+a {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: black !important;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+p {
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    line-height: 1.8;
+    color: black;
+    margin: 0px;
+}
+
+#left-topbar a:hover,
+#right-topbar a:hover,
+.wrap-box a:hover {
+    text-decoration: none !important;
+    color: #ffff00 !important;
+}
+
+.header-content h1 {
+    font-family: Roboto-MediumItalic;
+    font-size: 2em;
+    line-height: 1.7;
+    color: #4d4d4d;
+    font-weight: 700;
+    margin: 0.67em 0;
+}
+
+.title-typical-project,
+.best-selling-product,
+.title-our-partner {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 3%;
+    font-family: Roboto-MediumItalic !important;
+    font-size: 2em;
+    line-height: 1.7;
+    color: #4d4d4d;
+    font-weight: 700;
+    margin: 0.67em 0;
+}
+
+/* ----------------------- Top Bar -----------------------*/
+#top-header {
+    background-color: #f93d3d;
+}
+
+#top-bar {
+    margin: 0;
+    padding: 5px 0;
+    height: 35px;
+}
+
+#left-topbar ul li,
+#right-topbar ul li {
+    font-family: "Inter";
+    font-size: 13px;
+    list-style-type: none;
+    display: inline;
+    margin-right: 10px;
+}
+
+a {
+    color: black;
+}
+
+#left-topbar ul {
+    text-align: left !important;
+    padding-left: 1px;
+    display: flex;
+}
+
+#right-topbar ul {
+    text-align: right !important;
+    padding-right: 1px;
+}
+
+/* ----------------------- Top Bar -----------------------*/
+
+/* ----------------------- Main Content -----------------------*/
+#main-content {
+    width: 100%;
+}
+
+#background {
+    position: relative;
+    opacity: 60%;
+}
+
+#background img {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.container {
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 7%;
+}
+
+#logo img {
+    width: 35%;
+}
+
+#menu {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+
+.menu-link {
+    position: relative;
+}
+
+.menu-link::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    transition: width 0.2s ease;
+    transform-origin: left;
+    margin-top: 20px;
+}
+
+.menu-trang-chu:hover::before {
+    width: 85px;
+}
+
+.menu-gioi-thieu:hover::before {
+    width: 80px;
+}
+
+.menu-lien-he:hover::before {
+    width: 60px;
+}
+
+.menu-san-pham:hover::before {
+    width: 80px;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateY(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateY(5px);
+    }
+}
+
+#btn-buynow:hover {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+.size-box-detail {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.box-1:hover,
+.box-2:hover,
+.box-3:hover {
+    transform: scale(1.1);
+}
+
+
+#menu.sticky {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* -----  fixed menu ----  */
+
+.tamducphat-fixed-header-col img {
+    width: 70%;
+    margin: auto;
+}
+
+.tamducphat-fixed-header-inner-wrapper {
+    margin-left: 7%;
+}
+
+.tamducphat-fixed-header-inner-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.tamducphat-fixed-header-col {
+    display: flex;
+}
+
+.submenu-content {
+    display: none;
+    width: 103px;
+    position: absolute;
+    top: 80%;
+    left: 77%;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.submenu-content li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.sub-menu:hover .submenu-content {
+    display: block;
+}
+
+.col-logo {
+    width: 30%;
+}
+
+.col-contact {
+    margin: auto;
+    width: 22%;
+}
+
+.col-contact a {
+    color: #c4a13d !important;
+    font-size: 35px;
+}
+
+.col-nav {
+    width: 50%;
+}
+
+.col-nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.tamducphat-fixed-header,
+.show-fixed-header {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    background-color: #dbd5d5;
+    /* Đổi màu nền của thanh navigation bar dính */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.show-fixed-header {
+    top: -110px;
+    left: 0;
+    right: 0;
+    transition: top 0.3s ease;
+}
+
+.show-fixed-header.show {
+    top: 0;
+}
+
+.tamducphat-fixed-header-inner-wrapper {
+    max-width: 84.688vw;
+    margin: 0 auto;
+    padding: 1.313vw 0;
+}
+
+/* -----  fixed menu ----  */
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.menu-content {
+    display: inline-block;
+    margin-left: 3%;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#slogan {
+    font-size: 600%;
+    color: #ed14d7;
+    position: absolute;
+    top: 54%;
+    left: 7%;
+    font-family: "Gelasio";
+    font-weight: bold;
+}
+
+/*Setup the blinking sidebar*/
+div#slogan>span:after {
+    content: "";
+    /*The width is the actual sidebar thickness.*/
+    width: 2px;
+    /*The height fits to the text*/
+    height: 100%;
+    background-color: black;
+    /*Position the sidebar at the right of the text*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*Apply the blinkking animation looping in 2 steps: visible -> hidden.*/
+    animation: blink 1s infinite steps(2, start);
+}
+
+/*Create the blinking animation by simply hide the element.*/
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+
+}
+
+#title {
+    position: absolute;
+    top: 49%;
+    left: 7%;
+    color: black;
+}
+
+#title p {
+    font-weight: bold;
+    font-size: 15px !important;
+    line-height: 1.7;
+}
+
+#btn-buynow {
+    position: absolute;
+    top: 71%;
+    left: 7%;
+}
+
+.wrap-box {
+    position: absolute;
+    width: 89%;
+    height: 97px;
+    top: 80%;
+    left: 7%;
+}
+
+.size-box-detail {
+    position: absolute;
+    width: 250px;
+    height: 97px;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.box-2 {
+    left: 38%;
+}
+
+.box-3 {
+    left: 75%;
+}
+
+.quality-img-1 {
+    left: 7.5%;
+}
+
+.quality-img-2 {
+    left: 41.5%;
+}
+
+.quality-img-3 {
+    left: 75%;
+}
+
+.quality {
+    position: absolute;
+    top: 82%;
+    width: 53px;
+    height: 53px;
+}
+
+.title-1 {
+    left: 7%;
+}
+
+.title-2 {
+    left: 44%;
+}
+
+.title-3 {
+    left: 83%;
+}
+
+.title {
+    position: inherit;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    word-wrap: break-word;
+    margin-top: 1%;
+}
+
+.title-all-3 {
+    inline-size: 20%;
+}
+
+.watch_more {
+    color: red;
+    font-size: 15px;
+    position: inherit;
+    margin-top: 6%;
+}
+
+.watch_more-1 {
+    left: 7%;
+}
+
+.watch_more-1:hover {}
+
+.watch_more-2 {
+    left: 44%;
+}
+
+.watch_more-3 {
+    left: 83%;
+}
+
+/* ----------------------- Main Content -----------------------*/
+
+/* ----------------------- Rich text container -----------------------*/
+
+.rich-text-container {
+    margin: auto;
+}
+
+.rich-text-wide {
+    max-width: 53.125rem;
+}
+
+.header-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-description {
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+.header-description {
+    color: #4d4d4d !important;
+    font-style: italic;
+}
+
+/* ----------------------- Rich text container -----------------------*/
+
+/* ----------------------- Promotion -----------------------*/
+.promotion-grid,
+.promotion-block-left,
+.promotion-block-right {
+    position: relative;
+    text-align: center;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.promotion-grid img,
+.promotion-block-left img,
+.promotion-block-right img {
+    max-width: 100%;
+    /* make image full a row, it use set div container max-width:100% */
+    height: auto;
+}
+
+.promotion-content,
+.promotion-content-left,
+.promotion-content-right {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+}
+
+.promotion-content {
+    top: 50%;
+    width: 100%;
+}
+
+.promotion-content-left,
+.promotion-content-right {
+    top: 20%;
+    width: 60%;
+    text-align: left !important;
+    margin-left: 10px;
+}
+
+
+.promotion-content-left h2,
+.promotion-content-left p,
+.promotion-content-right h2,
+.promotion-content-right p,
+.promotion-content h2,
+.promotion-content p {
+    color: white;
+}
+
+.promotion-block {
+    display: flex;
+    margin-top: 3%;
+}
+
+.promotion-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Chia thành hai cột bằng nhau */
+    grid-gap: 2%;
+    /* Khoảng cách giữa các cột */
+}
+
+.promotion-content-left .promotion-content-right {
+    max-width: 60%;
+}
+
+/* ----------------------- Promotion -----------------------*/
+
+/* ----------------------- danh mục sản phẩm -----------------------*/
+.name-type-product {
+    background-color: #f6eb17;
+}
+
+.name-type-product h4 {
+    font-family: Montserrat-Regular !important;
+    font-size: 2em;
+    line-height: 1.7;
+    color: black;
+    font-weight: 700;
+    margin: 0.67em 0;
+}
+
+
+
+.slider {
+    position: relative;
+    margin-top: 5%;
+}
+
+.type-product {
+    margin-top: 3%;
+}
+
+.see-more-type-product {
+    margin-top: 3%;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow: hidden;
+    flex: 0 0 25%;
+}
+
+.grid-item {
+    display: grid;
+    grid-template-rows: 300px auto auto;
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slick-slide img {
+    margin: auto;
+}
+
+.prev-arrow,
+.next-arrow {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.next-arrow {
+    margin-right: 10px;
+}
+
+/* ----------------------- danh mục sản phẩm -----------------------*/
+
+/* ----------------------- typical project  -----------------------*/
+.typical-project {
+    margin-top: 5px;
+    background-color: #e6e6e6;
+}
+
+.box-video-1,
+.box-video-2,
+.box-video-3 {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+/* ----------------------- typical project  -----------------------*/
+
+/* ----------------------- our partner  -----------------------*/
+
+
+.our-partner {
+    margin-top: 5px;
+}
+
+.title-slogan-our-partner {
+    text-align: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.circle img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+/* ----------------------- our partner  -----------------------*/
+
+/* ----------------------- footer -----------------------*/
+.footer {
+    background-color: #f6eb17;
+    color: white;
+    padding: 20px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex-basis: 33.33%;
+}
+
+.footer-logo img {
+    width: 50%;
+}
+
+.footer-name-company {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    font-family: Montserrat-Regular;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+.footer-content {
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.footer-content p {
+    color: #666666 !important;
+}
+
+.info-company,
+.services-company {
+    margin-left: 15%;
+}
+
+.info-company ol,
+.services-company ol {
+    list-style: none;
+}
+
+.info-company h4,
+.services-company h4 {
+    font-family: Montserrat-Regular;
+}
+
+.services-company ol li {
+    margin-top: 10px;
+}
+
+.mastercard img {
+    width: 20%;
+}
+
+/* ----------------------- footer -----------------------*/
+
+
+/* ----------------------- Login Form -----------------------*/
+.account-page-masthead {
+    margin: auto;
+    max-width: 500px;
+}
+
+.form-field {
+    margin-bottom: 1.25rem;
+    position: relative;
+    max-width: 500px;
+}
+
+.account-page-masthead h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 3%;
+    font-family: Roboto-MediumItalic !important;
+    font-size: 2em;
+    line-height: 1.7;
+    color: #4d4d4d;
+    font-weight: 700;
+    margin: 0.67em 0;
+}
+
+.form-field-input {
+    border: 1px solid rgba(127, 127, 127, .3);
+    border-radius: 3px;
+    padding: 1.5rem 0.625rem 0.375rem;
+    font-size: 16px;
+    color: #4d4d4d;
+    font-style: normal;
+    font-weight: 400;
+    width: 500px;
+}
+
+.form-action {
+    margin-top: 1.25rem;
+    text-align: center;
+}
+
+.form-action-submit {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.button-primary {
+    background-color: #e32619;
+    border: 1px solid #e32619;
+    color: white;
+
+    padding: 0.625rem 1rem;
+    font-size: .875rem;
+    font-family: Lato, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color .2s ease, width .2s ease, height .2s ease;
+}
+
+.form-action-row-helper {
+    display: inline-block;
+    margin-top: 1.25rem;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.form-action-row-helper-item a {
+    color: #e32619 !important;
+}
+
+/* ----------------------- Login Form -----------------------*/
