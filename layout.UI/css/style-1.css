@@ -8,6 +8,11 @@
     src: url("../fonts/Roboto-MediumItalic.ttf");
 }
 
+@font-face {
+    font-family: Montserrat-ExtraBold;
+    src: url("../fonts/Montserrat-ExtraBold.ttf");
+}
+
 body,
 html {
     height: 100%;
@@ -194,7 +199,7 @@ a {
 }
 
 .menu-san-pham:hover::before {
-    width: 80px;
+    width: 118px;
 }
 
 @keyframes shake {
@@ -265,10 +270,10 @@ a {
 
 .submenu-content {
     display: none;
-    width: 103px;
+    width: 116px;
     position: absolute;
     top: 80%;
-    left: 77%;
+    left: 73%;
     background-color: #ffffff;
     padding: 10px;
 }
@@ -903,3 +908,32 @@ div#slogan>span:after {
     width: 680px;
 }
 /* ----------------------- About Us -----------------------*/
+
+/* ----------------------- Type Product -----------------------*/
+
+.type-product-grid-wrapper {
+    justify-items: center;
+    height: 70px;
+    display: flex;
+}
+
+.nav-title {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.section-title-1 span {
+    color: #e32619;
+}
+
+.section-title-2 span {
+    color:#4d4d4d;
+}
+
+.collection-title h1 {
+    text-align: left ;
+    margin: -0.33em 0 ;
+    font-family: Montserrat-ExtraBold;
+}
+
+/* ----------------------- Type Product -----------------------*/

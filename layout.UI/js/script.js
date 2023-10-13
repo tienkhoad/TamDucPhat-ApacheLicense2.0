@@ -1,36 +1,49 @@
-
-
 $(document).ready(function () {
-  $('.prev-arrow').html('<i class="bi bi-chevron-double-left"></i>');
-  $('.next-arrow').html('<i class="bi bi-chevron-double-right"></i>');
-  $('.grid-container').slick({
-    slidesToShow: 4, // Hiển thị 4 sản phẩm cùng một lúc
-    slidesToScroll: 1, // Di chuyển 1 sản phẩm mỗi lần chuyển đổi
-    prevArrow: $('.prev-arrow'), // Icon mũi tên trái
-    nextArrow: $('.next-arrow'), // Icon mũi tên phải
-    responsive: [
-      {
-        breakpoint: 991, // Thêm breakpoint mới
-        settings: {
-          slidesToShow: 3 // Hiển thị 3 sản phẩm trên các thiết bị có độ rộng nhỏ hơn hoặc bằng 991px
+  $('.type-product').each(function () {
+    var $slider = $(this).find('.grid-container');
+    var $prevArrow = $(this).find('.prev-arrow');
+    var $nextArrow = $(this).find('.next-arrow');
+    var $prevArrow = $prevArrow.html('<i class="bi bi-chevron-double-left"></i>');
+    var $nextArrow = $nextArrow.html('<i class="bi bi-chevron-double-right"></i>');
+
+    $slider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      prevArrow: $prevArrow,
+      nextArrow: $nextArrow,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
         }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2 // Hiển thị 2 sản phẩm trên các thiết bị có độ rộng nhỏ hơn 768px
-        }
-      }
-    ]
+      ]
+    });
+
+    $nextArrow.on('click', function () {
+      $slider.slick('slickNext');
+    });
+    $prevArrow.on('click', function () {
+      $slider.slick('slickPrev');
+    });
   });
 });
+
+
 
 window.addEventListener('DOMContentLoaded', function () {
   var header = document.querySelector('.show-fixed-header');
   var scrollToTopBtn = document.getElementById('backtotop');
 
   // Ẩn show-fixed-header khi trang web được tải lên
-  header.classList.remove('show');
+  //header.classList.remove('show');
 
   // Hiển thị show-fixed-header khi cuộn xuống đến 200px
   window.addEventListener('scroll', function () {
