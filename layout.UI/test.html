@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Grid</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="filter">
+                    <form>
+                        <div class="form-group">
+                            <label for="sort">Sort by:</label>
+                            <select class="form-control" id="sort">
+                                <option value="feature">Feature</option>
+                                <option value="price">Price</option>
+                                <option value="name">Name</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row product-grid">
+                    <!-- Sản phẩm 1 -->
+                    <div class="col-md-4">
+                        <div class="product card">
+                            <img src="product1.jpg" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 1</h5>
+                                <p class="card-text">Price: $100</p>
+                                <button class="btn btn-primary buy-button">Buy Now</button>
+                                <button class="btn btn-success add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sản phẩm 2 -->
+                    <div class="col-md-4">
+                        <div class="product card">
+                            <img src="product2.jpg" class="card-img-top" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 2</h5>
+                                <p class="card-text">Price: $80</p>
+                                <button class="btn btn-primary buy-button">Buy Now</button>
+                                <button class="btn btn-success add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Thêm sản phẩm khác ở đây -->
+                </div>
+                <div class="pagination">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <span class="page-link">Previous</span>
+                        </li>
+                        <li class="page-item active"><span class="page-link">1</span></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="view-as">
+                    <form>
+                        <div class="form-group">
+                            <label for="view">View As:</label>
+                            <select class="form-control" id="view">
+                                <option value="grid">Grid</option>
+                                <option value="list">List</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

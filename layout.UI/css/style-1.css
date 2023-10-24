@@ -936,4 +936,31 @@ div#slogan>span:after {
     font-family: Montserrat-ExtraBold;
 }
 
+.collection-decscription {
+    margin-top: 10px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.type-product-item {
+    margin-top: 20px;
+}
+
+.btn-buynow-red {
+    background-color: #e32619 !important;
+    border-color: #e32619 !important;
+}
+
+.type-product-image-hover {
+    display: none;
+}
+
+.product-image:hover + .type-product-image-hover {
+    display: block;
+}
 /* ----------------------- Type Product -----------------------*/

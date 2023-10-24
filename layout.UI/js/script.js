@@ -125,5 +125,20 @@ type(words[index]);
 
 
 
+// Lấy tham chiếu đến các phần tử DOM
+var img1 = document.getElementById("img1");
+var typeProductImageHover = document.querySelector(".type-product-image-hover");
 
+// Lưu trữ src ban đầu của img1
+var originalImgSrc = img1.src;
+
+// Sử dụng sự kiện mouseover và mouseout
+img1.addEventListener("mouseover", function () {
+  console.log("mouseover");
+    img1.src = typeProductImageHover.src;
+});
+
+img1.addEventListener("mouseout", function () {
+    img1.src = originalImgSrc;
+});
 
