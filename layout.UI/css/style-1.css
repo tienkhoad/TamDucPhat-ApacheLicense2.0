@@ -956,11 +956,17 @@ div#slogan>span:after {
     border-color: #e32619 !important;
 }
 
+.product-image, .product-image-hover {
+    width: 253px;
+    height: 253px;
+    object-fit: cover;
+}
+
 .type-product-image-hover {
     display: none;
 }
 
 .product-image:hover + .type-product-image-hover {
-    display: block;
+    display: none;
 }
 /* ----------------------- Type Product -----------------------*/

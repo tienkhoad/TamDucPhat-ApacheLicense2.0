@@ -134,7 +134,6 @@ var originalImgSrc = img1.src;
 
 // Sử dụng sự kiện mouseover và mouseout
 img1.addEventListener("mouseover", function () {
-  console.log("mouseover");
     img1.src = typeProductImageHover.src;
 });
 
