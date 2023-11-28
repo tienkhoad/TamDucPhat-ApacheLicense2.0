@@ -1,5 +1,8 @@
 import React from "react";
 import "../../style/style.css";
+import imgAsset from "../../logo/1x/Asset 1.png";
+import imgArtboard12 from "../../logo/1x/Artboard 12.png";
+import imgArtboard1 from "../../logo/1x/Artboard 1.png";
 
 const Footer = () => {
   return (
@@ -9,7 +12,7 @@ const Footer = () => {
           <div className="footer-columns container">
             <div className="footer-column">
               <div className="footer-logo">
-                <img src="logo/1x/Asset 1.png" />
+                <img src={imgAsset} />
               </div>
               <div className="footer-name-company">
                 <h2>CÔNG TY TNHH PCCC TÂM ĐỨC PHÁT</h2>
@@ -47,8 +50,8 @@ const Footer = () => {
                     <li>
                       <h4>Phương thức thanh toán</h4>
                       <div className="mastercard">
-                        <img src="logo/1x/Artboard 12.png" />
-                        <img src="logo/1x/Artboard 1.png" />
+                        <img src={imgArtboard12} />
+                        <img src={imgArtboard1} />
                       </div>
                     </li>
                   </ol>

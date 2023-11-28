@@ -650,6 +650,11 @@ div#slogan > span:after {
   text-align: center;
 }
 
+.horizontal-product {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

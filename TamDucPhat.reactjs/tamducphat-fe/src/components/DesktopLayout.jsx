@@ -44,7 +44,7 @@ DesktopLayout.propTypes = {
   children:
     width < 1280 ? PropTypes.arrayOf(PropTypes.element) : PropTypes.object,
   screenWidth: PropTypes.number,
-  screenHeight: PropTypes.string.isRequired,
+  screenHeight: PropTypes.string,
 };
 
 export default DesktopLayout;
