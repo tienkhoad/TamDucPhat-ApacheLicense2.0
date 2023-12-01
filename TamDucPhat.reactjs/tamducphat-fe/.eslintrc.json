@@ -43,7 +43,7 @@
         "import/prefer-default-export": "off",
         "jsx-a11y/no-autofocus": "off",
         "prettier/prettier": 2,
-        "no-console": "error",
+        "no-console": "off",
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error"
     }

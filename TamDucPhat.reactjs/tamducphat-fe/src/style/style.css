@@ -642,6 +642,7 @@ div#slogan > span:after {
 }
 
 .type-product {
+  width: auto;
   margin-top: 3%;
 }
 
@@ -698,6 +699,15 @@ div#slogan > span:after {
 
 .next-arrow {
   margin-right: 10px;
+}
+
+.slick-slide {
+  width: auto !important;
+}
+
+.slick-track {
+  width: auto !important;
+  transform: translate3d(0px, 0px, 0px) !important;
 }
 
 /* ----------------------- danh mục sản phẩm -----------------------*/

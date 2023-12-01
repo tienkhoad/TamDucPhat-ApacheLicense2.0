@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../../../style/style.css";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel as ProductCarousel } from "antd";
+import { Button } from "antd";
 import Daubaochay from "../../../img/products/Đầu báo cháy nhiệt cố định địa chỉ không đế/Đầu báo cháy nhiệt cố định địa chỉ không đế.jpg";
 import Daubaokhoilap from "../../../img/products/Đầu báo khói lắp trên đường ống địa chỉ Hochiki/Đầu báo khói lắp trên đường ống địa chỉ Hochiki.jpg";
 import DauBaoKhoiNhiet from "../../../img/products/Đầu báo khói nhiệt kế hợp địa chỉ - ACC-V/Đầu báo khói nhiệt kế hợp địa chỉ - ACC-V.jpg";
@@ -20,23 +27,55 @@ const Product = ({ imageSrc, productName, price }) => {
   );
 };
 
-const ProductType = ({ typeName, products }) => {
+const ProductType = ({ typeName, products, dynamicSlidesToShow }) => {
   const initialProducts = products.slice(0, 4);
+  const carouselRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      carouselRef.current.prev();
+    }
+  };
+
+  const handleNext = () => {
+    console.log("handleNext called");
+    console.log("currentIndex:", currentIndex);
+    console.log("products.length:", products.length);
+    console.log(dynamicSlidesToShow);
+    if (currentIndex < products.length - dynamicSlidesToShow) {
+      setCurrentIndex(currentIndex + 1);
+      carouselRef.current.next();
+    }
+  };
+
   return (
     <div className="type-product">
       <div className="name-type-product">
         <h4>{typeName}</h4>
       </div>
-      <ProductCarousel
-        nextArrow={<button className="next-arrow"></button>}
-        prevArrow={<button className="prev-arrow"></button>}
-      >
+      <ProductCarousel ref={carouselRef} slidesToShow={4}>
         {initialProducts.map((product, index) => (
           <div key={index} className="grid-slide grid-container">
             <Product {...product} />
           </div>
         ))}
       </ProductCarousel>
+      <div className="row">
+        <div className="col-md-2">
+          {/* Nút Previous */}
+          <Button className="btn btn-light" onClick={handlePrev}>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </Button>
+        </div>
+        <div className="col-md-8"></div>
+        <div className="col-md-2">
+          {/* Nút Next */}
+          <Button className="btn btn-light" onClick={handleNext}>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </Button>
+        </div>
+      </div>
       <div className="see-more-type-product">
         <a href="">
           Xem thêm <i className="bi bi-three-dots"></i>
@@ -47,13 +86,14 @@ const ProductType = ({ typeName, products }) => {
 };
 
 const ProductsProperties = () => {
+  const carouselRef = useRef(null);
   const productTypes = [
     {
       typeName: "BÁO CHÁY HOCHIKI",
       products: [
         {
           imageSrc: Daubaochay,
-          productName: "Product 2",
+          productName: "Product 1",
           price: 15.99,
         },
         {
@@ -63,22 +103,22 @@ const ProductsProperties = () => {
         },
         {
           imageSrc: DauBaoKhoiNhiet,
-          productName: "Product 2",
+          productName: "Product 3",
           price: 15.99,
         },
         {
           imageSrc: DauBaoKhoiQuang,
-          productName: "Product 2",
+          productName: "Product 4",
           price: 15.99,
         },
         {
           imageSrc: DauDoGas,
-          productName: "Product 2",
+          productName: "Product 5",
           price: 15.99,
         },
         {
           imageSrc: DauBaoKhoiNhietHSB,
-          productName: "Product 2",
+          productName: "Product 6 ",
           price: 15.99,
         },
       ],
@@ -115,13 +155,21 @@ const ProductsProperties = () => {
     },
   ];
 
+  useEffect(() => {
+    //console.log('Carousel Ref:', carouselRef.current);
+  }, [carouselRef]);
+
   return (
     <>
       <div id="products">
         <div className="container">
           <div className="best-selling-product"> DANH MỤC SẢN PHẨM </div>
           {productTypes.map((type, index) => (
-            <ProductType key={index} {...type} />
+            <ProductType
+              key={index}
+              {...type}
+              dynamicSlidesToShow={type.dynamicSlidesToShow}
+            />
           ))}
           <div className="type-product" id="type-product-2">
             <div className="name-type-product">
@@ -220,6 +268,7 @@ Product.propTypes = {
 ProductType.propTypes = {
   typeName: PropTypes.string,
   products: PropTypes.array,
+  dynamicSlidesToShow: PropTypes.number,
 };
 
 export default ProductsProperties;
