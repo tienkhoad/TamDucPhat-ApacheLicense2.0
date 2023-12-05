@@ -511,9 +511,6 @@ div#slogan > span:after {
   left: 7%;
 }
 
-.watch_more-1:hover {
-}
-
 .watch_more-2 {
   left: 44%;
 }
@@ -701,13 +698,17 @@ div#slogan > span:after {
   margin-right: 10px;
 }
 
-.slick-slide {
+/* .slick-slide {
   width: auto !important;
 }
 
 .slick-track {
   width: auto !important;
   transform: translate3d(0px, 0px, 0px) !important;
+} */
+
+.type-product .slick-slider {
+  transition: transform 0.5s ease-in-out; /* Adjust the duration and easing as needed */
 }
 
 /* ----------------------- danh mục sản phẩm -----------------------*/
