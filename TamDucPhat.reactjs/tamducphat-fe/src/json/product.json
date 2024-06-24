@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "image": "/path/to/image1.jpg",
+      "name": "Product 1",
+      "price": 19.99,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "image": "/path/to/image2.jpg",
+      "name": "Product 2",
+      "price": 29.99,
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "image": "/path/to/image3.jpg",
+      "name": "Product 3",
+      "price": 39.99,
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  ]
+}

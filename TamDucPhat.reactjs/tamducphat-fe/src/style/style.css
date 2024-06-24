@@ -34,6 +34,11 @@ a {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
+  text-decoration: none;
+}
+.no-transition {
+  transition: none !important;
+  animation: none !important;
 }
 
 p {
@@ -654,17 +659,23 @@ div#slogan > span:after {
 }
 
 .grid-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   overflow: hidden;
-  flex: 0 0 25%;
+  flex: 0 0 25%; */
+}
+
+.grid-slide {
+  display: flex;
+  justify-content: space-between;
 }
 
 .grid-item {
   display: grid;
   grid-template-rows: 300px auto auto;
   text-align: center;
+  max-width: 300px;
 }
 
 .grid-item img {
@@ -698,14 +709,14 @@ div#slogan > span:after {
   margin-right: 10px;
 }
 
-/* .slick-slide {
-  width: auto !important;
+.slick-slide {
+  width: 200px !important;
 }
 
 .slick-track {
-  width: auto !important;
+  width: 1294px !important;
   transform: translate3d(0px, 0px, 0px) !important;
-} */
+}
 
 .type-product .slick-slider {
   transition: transform 0.5s ease-in-out; /* Adjust the duration and easing as needed */
@@ -722,8 +733,7 @@ div#slogan > span:after {
 .box-video-1,
 .box-video-2,
 .box-video-3 {
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin: auto !important;
 }
 
 /* ----------------------- typical project  -----------------------*/

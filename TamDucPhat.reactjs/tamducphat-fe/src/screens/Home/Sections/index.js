@@ -3,6 +3,7 @@ import ProductsSection from "./ProductsSection";
 import PromotionSection from "./PromotionSection";
 import RichTextSection from "./RichTextSection";
 import TypicalProjectsSection from "./TypicalProjectsSection";
+import PartnerSection from "./PartnerSection";
 
 export {
   MainContentSection,
@@ -10,4 +11,5 @@ export {
   PromotionSection,
   RichTextSection,
   TypicalProjectsSection,
+  PartnerSection,
 };

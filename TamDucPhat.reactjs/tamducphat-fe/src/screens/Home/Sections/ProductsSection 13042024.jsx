@@ -27,31 +27,40 @@ const Product = ({ imageSrc, productName, price }) => {
   );
 };
 
-const ProductType = ({ typeName, products, dynamicSlidesToShow }) => {
-  const initialProducts = products.slice(0, 4);
-  const carouselRef = useRef(null);
+const ProductType = ({ typeName, products }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-      carouselRef.current.prev();
-    }
+  const itemsToShow = 4;
+  const displayedProducts = products.slice(
+    currentIndex,
+    currentIndex + itemsToShow,
+  );
+
+  const showNextProducts = () => {
+    const newIndex = (currentIndex + 1) % products.length;
+    setCurrentIndex(newIndex);
   };
 
-  const handleNext = () => {
-    if (currentIndex < products.length - dynamicSlidesToShow) {
-      setCurrentIndex(currentIndex + 1);
-      carouselRef.current.next();
-    }
+  const showPreviousProducts = () => {
+    const newIndex = (currentIndex - 1 + products.length) % products.length;
+    setCurrentIndex(newIndex);
   };
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [products]);
 
   return (
     <div className="type-product">
       <div className="name-type-product">
         <h4>{typeName}</h4>
       </div>
-      <ProductCarousel ref={carouselRef} slidesToShow={4}>
-        {initialProducts.map((product, index) => (
+      <ProductCarousel
+        dots={false}
+        autoplay={false}
+        fade={true}
+        initialSlide={0}
+      >
+        {displayedProducts.map((product, index) => (
           <div key={index} className="grid-slide grid-container">
             <Product {...product} />
           </div>
@@ -60,14 +69,14 @@ const ProductType = ({ typeName, products, dynamicSlidesToShow }) => {
       <div className="row">
         <div className="col-md-2">
           {/* Nút Previous */}
-          <Button className="btn btn-light" onClick={handlePrev}>
+          <Button className="btn btn-light" onClick={showPreviousProducts}>
             <FontAwesomeIcon icon={faChevronLeft} />
           </Button>
         </div>
         <div className="col-md-8"></div>
         <div className="col-md-2">
           {/* Nút Next */}
-          <Button className="btn btn-light" onClick={handleNext}>
+          <Button className="btn btn-light" onClick={showNextProducts}>
             <FontAwesomeIcon icon={faChevronRight} />
           </Button>
         </div>
@@ -83,73 +92,73 @@ const ProductType = ({ typeName, products, dynamicSlidesToShow }) => {
 
 const ProductsProperties = () => {
   const carouselRef = useRef(null);
-  // const productTypes = [
-  //   {
-  //     typeName: "BÁO CHÁY HOCHIKI",
-  //     products: [
-  //       {
-  //         imageSrc: Daubaochay,
-  //         productName: "Product 1",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         imageSrc: Daubaokhoilap,
-  //         productName: "Product 2",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         imageSrc: DauBaoKhoiNhiet,
-  //         productName: "Product 3",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         imageSrc: DauBaoKhoiQuang,
-  //         productName: "Product 4",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         imageSrc: DauDoGas,
-  //         productName: "Product 5",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         imageSrc: DauBaoKhoiNhietHSB,
-  //         productName: "Product 6 ",
-  //         price: 15.99,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     typeName: "BÁO CHÁY HORING LIH",
-  //     products: [
-  //       {
-  //         imageSrc: DauBaoChayNhietCoDinh,
-  //         productName: "Product 2",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         imageSrc: DauBaoChayNhietCoDinh,
-  //         productName: "Product 2",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         imageSrc: DauBaoChayNhietCoDinh,
-  //         productName: "Product 2",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         imageSrc: DauBaoChayNhietCoDinh,
-  //         productName: "Product 2",
-  //         price: 15.99,
-  //       },
-  //       {
-  //         imageSrc: DauBaoChayNhietCoDinh,
-  //         productName: "Product 2",
-  //         price: 15.99,
-  //       },
-  //     ],
-  //   },
-  // ];
+  const productTypes = [
+    {
+      typeName: "BÁO CHÁY HOCHIKI",
+      products: [
+        {
+          imageSrc: Daubaochay,
+          productName: "Product 1",
+          price: 15.99,
+        },
+        {
+          imageSrc: Daubaokhoilap,
+          productName: "Product 2",
+          price: 15.99,
+        },
+        {
+          imageSrc: DauBaoKhoiNhiet,
+          productName: "Product 3",
+          price: 15.99,
+        },
+        {
+          imageSrc: DauBaoKhoiQuang,
+          productName: "Product 4",
+          price: 15.99,
+        },
+        {
+          imageSrc: DauDoGas,
+          productName: "Product 5",
+          price: 15.99,
+        },
+        {
+          imageSrc: DauBaoKhoiNhietHSB,
+          productName: "Product 6 ",
+          price: 15.99,
+        },
+      ],
+    },
+    {
+      typeName: "BÁO CHÁY HORING LIH",
+      products: [
+        {
+          imageSrc: DauBaoChayNhietCoDinh,
+          productName: "Product 2",
+          price: 15.99,
+        },
+        {
+          imageSrc: DauBaoChayNhietCoDinh,
+          productName: "Product 2",
+          price: 15.99,
+        },
+        {
+          imageSrc: DauBaoChayNhietCoDinh,
+          productName: "Product 2",
+          price: 15.99,
+        },
+        {
+          imageSrc: DauBaoChayNhietCoDinh,
+          productName: "Product 2",
+          price: 15.99,
+        },
+        {
+          imageSrc: DauBaoChayNhietCoDinh,
+          productName: "Product 2",
+          price: 15.99,
+        },
+      ],
+    },
+  ];
 
   useEffect(() => {
     //console.log('Carousel Ref:', carouselRef.current);
@@ -160,81 +169,18 @@ const ProductsProperties = () => {
       <div id="products">
         <div className="container">
           <div className="best-selling-product"> DANH MỤC SẢN PHẨM </div>
-          <div className="type-product" id="type-product-1">
-            <div className="name-type-product">
-              <h4>BÁO CHÁY HOCHIKI </h4>
-            </div>
-            <div className="slider">
-              <div className="grid-slide grid-container">
-                <div className="grid-item">
-                  <img
-                    src="img/products/Đầu báo cháy nhiệt cố định địa chỉ không đế/Đầu báo cháy nhiệt cố định địa chỉ không đế.jpg"
-                    alt="Product Image"
-                  />
-                  <h3>Product 2</h3>
-                  <p>$15.99</p>
-                </div>
-                <div className="grid-item">
-                  <img
-                    src="img/products/Đầu báo khói lắp trên đường ống địa chỉ Hochiki/Đầu báo khói lắp trên đường ống địa chỉ Hochiki.jpg"
-                    alt="Product Image"
-                  />
-                  <h3>Product 3</h3>
-                  <p>$19.99</p>
-                </div>
-                <div className="grid-item">
-                  <img
-                    src="img/products/Đầu báo khói nhiệt kế hợp địa chỉ - ACC-V/Đầu báo khói nhiệt kế hợp địa chỉ - ACC-V.jpg"
-                    alt="Product Image"
-                  />
-                  <h3>Product 4</h3>
-                  <p>$12.99</p>
-                </div>
-                <div className="grid-item">
-                  <img
-                    src="img/products/Đầu báo khói quang địa chỉ kèm đế Hochiki ALN-V/Đầu báo khói quang địa chỉ kèm đế Hochiki ALN-V.jpg"
-                    alt="Product Image"
-                  />
-                  <h3>Product 5</h3>
-                  <p>$10.99</p>
-                </div>
-                <div className="grid-item">
-                  <img
-                    src="img/products/Đầu dò gas HORING AH-0822/Đầu dò gas HORING AH-0822.jpg"
-                    alt="Product Image"
-                  />
-                  <h3>Product 6</h3>
-                  <p>$15.99</p>
-                </div>
-                <div className="grid-item">
-                  <img
-                    src="img/products/Đế đầu báo khói nhiệt địa chỉ Hochiki HSB-NSA-6/Đế đầu báo khói nhiệt địa chỉ Hochiki HSB-NSA-6.jpg"
-                    alt="Product Image"
-                  />
-                  <h3>Product 8</h3>
-                  <p>$12.99</p>
-                </div>
-              </div>
-              <div className="slider-controls">
-                <button className="prev-arrow"></button>
-                <button className="next-arrow"></button>
-              </div>
-            </div>
-            <div className="see-more-type-product">
-              <a href="">
-                Xem thêm <i className="bi bi-three-dots"></i>
-              </a>
-            </div>
-          </div>
+          {productTypes.map((type, index) => (
+            <ProductType key={index} {...type} />
+          ))}
           <div className="type-product" id="type-product-2">
             <div className="name-type-product">
-              <h4>BÁO CHÁY HORING LIH </h4>
+              <h4>BÁO CHÁY HORING LIH 1 </h4>
             </div>
             <div className="slider">
               <div className="grid-slide grid-container">
                 <div className="grid-item">
                   <img
-                    src="img/products/Bình cầu chữa cháy tự động 6Kg/Bình cầu chữa cháy tự động 6Kg.jpg"
+                    src="../../../img/products/Bình cầu chữa cháy tự động 6Kg/Bình cầu chữa cháy tự động 6Kg.jpg"
                     alt="Product Image"
                   />
                   <h3>Product 1</h3>

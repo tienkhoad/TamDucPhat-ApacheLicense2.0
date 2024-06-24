@@ -12,7 +12,7 @@ const MainContentProperties = () => {
     <>
       <div id="main-content">
         <div className="container">
-          <div id="background">
+          <div id="background" className="no-transition">
             <img id="img_background" src={imgBackground} />
           </div>
           <div id="logo">

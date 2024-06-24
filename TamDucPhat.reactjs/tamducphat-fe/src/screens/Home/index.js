@@ -20,10 +20,10 @@ const HomeScreen = () => {
           <Sections.RichTextSection onHeightChange={handleHeightChange} />
           <Sections.PromotionSection onHeightChange={handleHeightChange} />
           <Sections.ProductsSection onHeightChange={handleHeightChange} />
-          <Sections.ProductsSection onHeightChange={handleHeightChange} />
           <Sections.TypicalProjectsSection
             onHeightChange={handleHeightChange}
           />
+          <Sections.PartnerSection onHeightChange={handleHeightChange} />
         </DesktopLayout>
       ) : (
         <>
